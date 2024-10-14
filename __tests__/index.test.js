@@ -20,12 +20,12 @@ describe("Home", () => {
     expect(container).toBeInTheDocument()
   })
 
-  it("renders a heading", () => {
+  it("renders a list", () => {
     render(<HomePage />)
 
-    const heading = screen.getByRole("heading", { level: 1 })
+    const list = screen.getByRole("list")
 
-    expect(heading).toBeInTheDocument()
+    expect(list).toBeInTheDocument()
   })
 
   it("renders homepage unchanged", () => {
