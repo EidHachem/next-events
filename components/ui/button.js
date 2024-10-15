@@ -3,11 +3,19 @@ import React from "react"
 
 import classes from "@/styles/ui/button.module.css"
 
-const Button = ({ children, link }) => {
+const Button = ({ children, link, onClick }) => {
+  if (link) {
+    return (
+      <Link href={link} className={classes.btn}>
+        {children}
+      </Link>
+    )
+  }
+
   return (
-    <Link href={link} className={classes.btn}>
+    <button onClick={onClick} className={classes.btn}>
       {children}
-    </Link>
+    </button>
   )
 }
 
